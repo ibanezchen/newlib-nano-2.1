@@ -46,7 +46,11 @@
 @    tidy
 
 	.syntax unified
+#if defined (__ARM_ARCH_7R__)
+	.arch armv7-r
+#else
 	.arch armv7-a
+#endif
 
 #include "arm_asm.h"
 
